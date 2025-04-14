@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+#globe-container {
+  width: 75%;
+  height: 100vh;
+  float: left;
+}
+
+#sidebar {
+  width: 25%;
+  height: 100vh;
+  float: right;
+  background: #222;
+  padding: 1em;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
