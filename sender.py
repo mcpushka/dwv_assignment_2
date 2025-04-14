@@ -4,9 +4,9 @@ import time
 import requests
 from datetime import datetime
 
-SPEEDUP = 10  # ускорим симуляцию в 10 раз
+SPEEDUP = 10 
 
-# Загрузка данных
+# Loading data
 with open('ip_addresses.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     data = sorted(list(reader), key=lambda x: int(x['timestamp']))
