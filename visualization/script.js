@@ -4,7 +4,7 @@ const locationsMap = {};
 
 init();
 animate();
-setInterval(fetchData, 2000); // обновлять каждые 2 секунды
+setInterval(fetchData, 2000);
 
 function init() {
   scene = new THREE.Scene();
@@ -15,7 +15,7 @@ function init() {
   renderer.setSize(window.innerWidth * 0.75, window.innerHeight);
   document.getElementById('globe-container').appendChild(renderer.domElement);
 
-  // Глобус
+  // Globe
   const sphere = new THREE.SphereGeometry(1, 32, 32);
   const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
   globe = new THREE.Mesh(sphere, material);
@@ -37,7 +37,7 @@ function fetchData() {
         const lon = pkg.longitude;
         const key = `${lat.toFixed(1)},${lon.toFixed(1)}`;
 
-        // Добавление точки, если новая
+        // Add a point if new
         if (!locationsMap[key]) {
           const point = createPoint(lat, lon);
           scene.add(point);
